@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taser vs. Stun Gun — Which Is Better for Self Defense? | TaserWorld</title>
+  <meta name="description" content="Taser vs. stun gun — what's the real difference? We break down range, stopping power, legal status, and which is better for self defense.">
+  <link rel="canonical" href="https://www.taserworld.com/resources/taser-vs-stun-gun/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-deep:#080c10;--bg-mid:#0d1520;--bg-card:#111d2e;--border:#1a2d44;--border-hi:#1e3a56;
+      --blue:#0ea5e9;--yellow:#facc15;--red:#ef4444;--green:#22c55e;
+      --text-1:#e8edf3;--text-2:#8fa8c0;--text-3:#4d6b85;
+      --display:'Barlow Condensed',sans-serif;--body:'Barlow',sans-serif;--mono:'IBM Plex Mono',monospace;
+    }
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg-deep);color:var(--text-1);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;}
+    a{color:var(--blue);text-decoration:none;}a:hover{color:var(--yellow);}
+    header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .header-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-1);}
+    .logo span{color:var(--yellow);}
+    .breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);display:flex;align-items:center;gap:8px;}
+    .breadcrumb a{color:var(--text-3);}
+    .inner{max-width:960px;margin:0 auto;padding:0 24px;}
+    .page-hero{background:var(--bg-mid);border-bottom:1px solid var(--border);padding:60px 0 48px;position:relative;}
+    .page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),transparent);}
+    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+    h1{font-family:var(--display);font-size:clamp(40px,5vw,72px);font-weight:800;text-transform:uppercase;line-height:0.95;margin-bottom:20px;}
+    h2{font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase;margin-bottom:16px;margin-top:48px;}
+    h3{font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;margin-bottom:12px;margin-top:28px;}
+    .body-text{font-size:15px;color:var(--text-2);line-height:1.8;margin-bottom:16px;}
+    .article-body{padding:48px 0 80px;}
+
+    .vs-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:32px 0;}
+    .vs-col{background:var(--bg-card);border:1px solid var(--border);padding:28px;}
+    .vs-col-title{font-family:var(--display);font-size:24px;font-weight:800;text-transform:uppercase;margin-bottom:4px;}
+    .vs-col-sub{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;}
+    .vs-list{list-style:none;display:flex;flex-direction:column;gap:8px;}
+    .vs-list li{font-size:14px;color:var(--text-2);display:flex;gap:8px;line-height:1.5;}
+    .vs-list li::before{flex-shrink:0;font-weight:700;margin-top:1px;}
+    .vs-list.advantage li::before{content:'▸';color:var(--green);}
+    .vs-list.disadvantage li::before{content:'▸';color:var(--red);}
+
+    .comparison-table-wrap{overflow-x:auto;border:1px solid var(--border);margin:24px 0;}
+    table{width:100%;border-collapse:collapse;font-size:14px;}
+    thead tr{background:rgba(14,165,233,0.08);border-bottom:2px solid rgba(14,165,233,0.25);}
+    thead th{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);padding:12px 16px;text-align:left;white-space:nowrap;}
+    tbody tr{border-bottom:1px solid var(--border);}
+    tbody td{padding:12px 16px;color:var(--text-2);}
+    tbody td:first-child{color:var(--text-1);font-weight:500;}
+    .win{color:var(--green);font-weight:600;}
+    .lose{color:var(--red);}
+
+    .verdict-box{background:var(--bg-card);border:1px solid var(--border);padding:28px;margin:32px 0;position:relative;}
+    .verdict-box::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--yellow);}
+    .verdict-label{font-family:var(--mono);font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:10px;}
+    .verdict-text{font-size:15px;color:var(--text-2);line-height:1.8;}
+
+    footer{background:#050810;border-top:1px solid var(--border);padding:40px 0;margin-top:0;}
+    .footer-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+    .footer-copy{font-family:var(--mono);font-size:11px;color:var(--text-3);}
+    .footer-disclaimer{font-size:12px;color:var(--text-3);max-width:580px;line-height:1.6;}
+    @media(max-width:640px){.vs-grid{grid-template-columns:1fr;}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Taser<span>World</span></a>
+    <nav class="breadcrumb">
+      <a href="/">Home</a><span style="color:var(--border-hi)">/</span>
+      <a href="/resources/">Resources</a><span style="color:var(--border-hi)">/</span>
+      <span style="color:var(--text-2)">Taser vs. Stun Gun</span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="inner">
+    <p class="section-label">Resource Guide</p>
+    <h1>Taser vs.<br>Stun Gun</h1>
+    <p style="font-size:17px;color:var(--text-2);max-width:600px;line-height:1.7;">They both use electricity. That's where the similarity ends. Here's what actually matters when choosing between a taser and a stun gun for self defense.</p>
+  </div>
+</section>
+
+<div class="article-body">
+<div class="inner">
+
+  <h2>The Core Difference</h2>
+  <p class="body-text">The terms "taser" and "stun gun" are often used interchangeably, but they are fundamentally different devices with different mechanisms, different effective ranges, and different stopping power.</p>
+  <p class="body-text">A <strong style="color:var(--text-1)">taser</strong> (technically a Conducted Energy Device or CED) fires two small probes on thin wires at a target up to 15 feet away. Those probes deliver an electrical current that causes <em>neuromuscular disruption</em> — the target's muscles involuntarily contract and they lose physical control, regardless of pain tolerance, adrenaline, or body size.</p>
+  <p class="body-text">A <strong style="color:var(--text-1)">stun gun</strong> is a contact device. You have to physically press it against the attacker and hold it there. It delivers a painful shock that works through <em>pain compliance</em> — it hurts enough that most people stop. But it does not cause neuromuscular disruption, and it requires you to be within arm's reach.</p>
+
+  <div class="vs-grid">
+    <div class="vs-col">
+      <h3 class="vs-col-title" style="color:var(--blue);">Taser</h3>
+      <p class="vs-col-sub">Probe Deployment / Neuromuscular Disruption</p>
+      <ul class="vs-list advantage">
+        <li>15-foot standoff range</li>
+        <li>Works regardless of pain tolerance</li>
+        <li>Stops targets on drugs or adrenaline</li>
+        <li>One shot incapacitates most attackers</li>
+        <li>Used by law enforcement</li>
+        <li>Backup drive-stun mode if probes miss</li>
+      </ul>
+    </div>
+    <div class="vs-col">
+      <h3 class="vs-col-title" style="color:var(--yellow);">Stun Gun</h3>
+      <p class="vs-col-sub">Contact Device / Pain Compliance</p>
+      <ul class="vs-list advantage">
+        <li>No cartridge cost — unlimited use</li>
+        <li>Smaller and easier to conceal</li>
+        <li>Rechargeable — always ready</li>
+        <li>Much lower price ($20–$60)</li>
+        <li>Loud crackle acts as a deterrent</li>
+        <li>Legal everywhere tasers are legal</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Head-to-Head Comparison</h2>
+  <div class="comparison-table-wrap">
+    <table>
+      <thead>
+        <tr><th>Factor</th><th>Taser</th><th>Stun Gun</th><th>Winner</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Effective Range</td><td class="win">Up to 15 feet</td><td class="lose">Contact only</td><td>Taser</td></tr>
+        <tr><td>Stopping Power</td><td class="win">Neuromuscular disruption</td><td class="lose">Pain compliance</td><td>Taser</td></tr>
+        <tr><td>Works on High-Adrenaline</td><td class="win">Yes</td><td class="lose">Often no</td><td>Taser</td></tr>
+        <tr><td>Number of Shots</td><td class="lose">1 probe shot (+ drive stun)</td><td class="win">Unlimited</td><td>Stun Gun</td></tr>
+        <tr><td>Price</td><td class="lose">$99–$399</td><td class="win">$20–$60</td><td>Stun Gun</td></tr>
+        <tr><td>Ongoing Cost</td><td class="lose">$25–40 per cartridge</td><td class="win">Just electricity</td><td>Stun Gun</td></tr>
+        <tr><td>Size / Concealability</td><td class="lose">Larger</td><td class="win">Compact</td><td>Stun Gun</td></tr>
+        <tr><td>Safety Under Stress</td><td class="win">Easier — fire from distance</td><td class="lose">Must reach attacker</td><td>Taser</td></tr>
+        <tr><td>Legal Status</td><td colspan="2" style="color:var(--text-2)">Same in most jurisdictions</td><td>Tie</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Which Should You Choose?</h2>
+
+  <h3>Choose a Taser If:</h3>
+  <p class="body-text">You prioritize effectiveness and are willing to pay for it. The TASER Pulse+ or Bolt 2 give you 15 feet of standoff distance and guaranteed neuromuscular effect. If your primary concern is stopping a determined attacker — especially one who is larger, on drugs, or extremely aggressive — a probe-deployment taser is the right choice. The one-shot limitation is a real tradeoff, but the stopping reliability is unmatched in non-lethal devices.</p>
+
+  <h3>Choose a Stun Gun If:</h3>
+  <p class="body-text">Budget is your primary constraint, or you want a rechargeable backup device with no ongoing cost. A stun gun on its own is a pain-compliance device — effective against most casual threats but not reliable against determined attackers. The best use case for a contact stun gun is as a secondary backup to a firearm or primary self-defense tool, or for situations where you only need a deterrent (the sound alone often ends confrontations).</p>
+
+  <div class="verdict-box">
+    <p class="verdict-label">Bottom Line</p>
+    <p class="verdict-text">For serious self-defense, a probe-deployment taser is the correct choice. The $249–$399 price of a TASER Bolt 2 or Pulse+ buys you 15 feet of standoff and a device that works on people who won't respond to pain. A stun gun at $30 is better than nothing, but it requires physical contact with an attacker and relies on them feeling pain. In a real threat scenario, that distinction matters enormously.</p>
+  </div>
+
+  <h2>A Note on "TASER" as a Brand Name</h2>
+  <p class="body-text">TASER is a registered trademark of Axon Enterprise, Inc. Like "Kleenex" or "Band-Aid," the brand name has become generic in common usage. Technically, only Axon-manufactured devices are TASERs — all others are stun guns, electronic control devices, or CEDs. When buying, verify you are purchasing from a reputable brand. Cheap no-name devices sold as "tasers" are typically contact stun guns with no probe deployment capability.</p>
+
+  <div style="margin-top:40px;padding:24px;background:var(--bg-card);border:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;">
+    <a href="/best-taser/" style="display:inline-flex;align-items:center;background:var(--yellow);color:#000;font-family:var(--display);font-size:14px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:12px 24px;">See Best Taser Picks</a>
+    <a href="/states/" style="display:inline-flex;align-items:center;background:transparent;color:var(--blue);font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border:1px solid var(--blue);">Check Your State's Laws</a>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="logo" style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;text-transform:uppercase;color:var(--text-1);">Taser<span style="color:var(--yellow)">World</span></a></div>
+    <div><p class="footer-copy">&copy; 2025 TaserWorld.com</p><p class="footer-disclaimer" style="margin-top:8px;">For informational purposes only. Not legal advice. "TASER" is a registered trademark of Axon Enterprise, Inc.</p></div>
+  </div>
+</footer>
+</body>
+</html>

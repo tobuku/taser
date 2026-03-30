@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How Tasers Work — Technical Guide | TaserWorld</title>
+  <meta name="description" content="How do tasers work? A complete technical guide to conducted energy devices — probe deployment, neuromuscular disruption, voltage vs. amperage, and drive-stun mode.">
+  <link rel="canonical" href="https://www.taserworld.com/resources/how-tasers-work/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg-deep:#080c10;--bg-mid:#0d1520;--bg-card:#111d2e;--border:#1a2d44;--blue:#0ea5e9;--yellow:#facc15;--green:#22c55e;--text-1:#e8edf3;--text-2:#8fa8c0;--text-3:#4d6b85;--display:'Barlow Condensed',sans-serif;--body:'Barlow',sans-serif;--mono:'IBM Plex Mono',monospace;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg-deep);color:var(--text-1);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;}
+    a{color:var(--blue);text-decoration:none;}a:hover{color:var(--yellow);}
+    header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .header-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-1);}
+    .logo span{color:var(--yellow);}
+    .breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);display:flex;align-items:center;gap:8px;}
+    .breadcrumb a{color:var(--text-3);}
+    .inner{max-width:960px;margin:0 auto;padding:0 24px;}
+    .page-hero{background:var(--bg-mid);border-bottom:1px solid var(--border);padding:60px 0 48px;position:relative;}
+    .page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--blue),var(--yellow),transparent);}
+    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+    h1{font-family:var(--display);font-size:clamp(40px,5vw,72px);font-weight:800;text-transform:uppercase;line-height:0.95;margin-bottom:20px;}
+    h2{font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase;margin-bottom:16px;margin-top:48px;}
+    h3{font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;margin-bottom:10px;margin-top:28px;color:var(--text-1);}
+    .body-text{font-size:15px;color:var(--text-2);line-height:1.8;margin-bottom:16px;}
+    .article-body{padding:48px 0 80px;}
+    .step-list{list-style:none;display:flex;flex-direction:column;gap:0;margin:24px 0;}
+    .step-item{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--border);}
+    .step-item:last-child{border-bottom:none;}
+    .step-num{font-family:var(--display);font-size:36px;font-weight:800;color:rgba(14,165,233,0.25);line-height:1;flex-shrink:0;width:48px;}
+    .step-content h3{margin-top:0;margin-bottom:8px;}
+    .step-content p{font-size:14px;color:var(--text-2);line-height:1.7;}
+    .spec-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:2px;margin:24px 0;}
+    .spec-box{background:var(--bg-card);border:1px solid var(--border);padding:20px;}
+    .spec-box-num{font-family:var(--display);font-size:40px;font-weight:800;color:var(--yellow);line-height:1;margin-bottom:4px;}
+    .spec-box-label{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);}
+    .spec-box-note{font-size:13px;color:var(--text-2);margin-top:6px;}
+    .info-box{background:var(--bg-card);border:1px solid var(--border);padding:24px;margin:24px 0;border-left:3px solid var(--blue);}
+    .info-box p{font-size:14px;color:var(--text-2);line-height:1.7;}
+    footer{background:#050810;border-top:1px solid var(--border);padding:40px 0;}
+    .footer-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+    .footer-copy{font-family:var(--mono);font-size:11px;color:var(--text-3);}
+    .footer-disclaimer{font-size:12px;color:var(--text-3);max-width:580px;line-height:1.6;}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Taser<span>World</span></a>
+    <nav class="breadcrumb">
+      <a href="/">Home</a><span style="color:#1e3a56">/</span>
+      <a href="/resources/">Resources</a><span style="color:#1e3a56">/</span>
+      <span style="color:var(--text-2)">How Tasers Work</span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="inner">
+    <p class="section-label">Technical Reference</p>
+    <h1>How Tasers<br>Work</h1>
+    <p style="font-size:17px;color:var(--text-2);max-width:600px;line-height:1.7;">A technical breakdown of conducted energy devices — from probe deployment to neuromuscular disruption and everything in between.</p>
+  </div>
+</section>
+
+<div class="article-body">
+<div class="inner">
+
+  <h2>What Is a Taser?</h2>
+  <p class="body-text">A taser — properly called a Conducted Energy Device (CED) or Electronic Control Device (ECD) — is a weapon that uses electrical current to disrupt voluntary muscle control. The name "TASER" is a registered trademark of Axon Enterprise, Inc., derived from "Thomas A. Swift's Electric Rifle," the 1911 science fiction novel that inspired inventor Jack Cover.</p>
+  <p class="body-text">Unlike conventional stun guns that require direct contact, a taser fires two small probes connected to thin conductive wires. When both probes make contact with the target, electrical current flows between them through the body, causing involuntary muscle contraction.</p>
+
+  <h2>The Firing Sequence — Step by Step</h2>
+  <ol class="step-list">
+    <li class="step-item">
+      <span class="step-num">01</span>
+      <div class="step-content">
+        <h3>Trigger Pull</h3>
+        <p>Pulling the trigger activates a nitrogen-propelled cartridge. The cartridge contains two probes (darts) on thin insulated wires, coiled tightly inside the cartridge housing.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <span class="step-num">02</span>
+      <div class="step-content">
+        <h3>Probe Deployment</h3>
+        <p>Compressed nitrogen expels the two probes at approximately 160 feet per second. The probes travel on separate trajectories — they splay apart as they fly, creating probe spread. At 15 feet, probe spread is approximately 12–18 inches, which helps ensure both probes make contact even with some aiming error.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <span class="step-num">03</span>
+      <div class="step-content">
+        <h3>Probe Penetration</h3>
+        <p>Each probe has a barbed tip designed to penetrate up to 2 inches of clothing and anchor in the skin or clothing layer. Both probes must make contact to complete the electrical circuit — if only one probe connects, no effect occurs (unless the device is also in drive-stun contact with the body).</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <span class="step-num">04</span>
+      <div class="step-content">
+        <h3>Electrical Pulse Delivery</h3>
+        <p>Once both probes are anchored, the device delivers a series of high-voltage, low-amperage electrical pulses through the wires and into the body. TASER devices deliver 19 pulses per second for a 5-second cycle at approximately 50,000 volts peak — but with extremely low amperage (typically 0.003 amperes average).</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <span class="step-num">05</span>
+      <div class="step-content">
+        <h3>Neuromuscular Disruption</h3>
+        <p>The electrical pulses interfere with the motor nerve signals traveling between the brain and muscles. The result is involuntary and uncontrollable muscle contraction throughout the muscle groups between the two probes. The person cannot control their limbs and typically falls. The effect ceases immediately when the electrical cycle ends — there is no residual impairment.</p>
+      </div>
+    </li>
+    <li class="step-item">
+      <span class="step-num">06</span>
+      <div class="step-content">
+        <h3>Drive-Stun Mode (Backup)</h3>
+        <p>If the probes miss or the cartridge has been expended, the TASER device can be pressed directly against the body to deliver a drive-stun. Drive-stun mode works through pain compliance (like a contact stun gun) — it does NOT cause neuromuscular disruption unless used in conjunction with an anchored probe. It is used primarily as a compliance tool in law enforcement, not for standalone incapacitation.</p>
+      </div>
+    </li>
+  </ol>
+
+  <h2>Key Technical Specifications</h2>
+  <div class="spec-grid">
+    <div class="spec-box">
+      <div class="spec-box-num">50K</div>
+      <p class="spec-box-label">Peak Voltage</p>
+      <p class="spec-box-note">High enough to arc across clothing and skin</p>
+    </div>
+    <div class="spec-box">
+      <div class="spec-box-num">0.003A</div>
+      <p class="spec-box-label">Average Amperage</p>
+      <p class="spec-box-note">Below the threshold for cardiac fibrillation</p>
+    </div>
+    <div class="spec-box">
+      <div class="spec-box-num">19</div>
+      <p class="spec-box-label">Pulses Per Second</p>
+      <p class="spec-box-note">Optimized for neuromuscular disruption</p>
+    </div>
+    <div class="spec-box">
+      <div class="spec-box-num">5 sec</div>
+      <p class="spec-box-label">Default Cycle</p>
+      <p class="spec-box-note">Provides time to retreat from a threat</p>
+    </div>
+    <div class="spec-box">
+      <div class="spec-box-num">15 ft</div>
+      <p class="spec-box-label">Civilian Range</p>
+      <p class="spec-box-note">TASER Pulse+, Bolt 2, and similar models</p>
+    </div>
+    <div class="spec-box">
+      <div class="spec-box-num">35 ft</div>
+      <p class="spec-box-label">LE Model Range</p>
+      <p class="spec-box-note">TASER 7, TASER 10 (law enforcement)</p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <p><strong style="color:var(--text-1)">Voltage vs. Amperage:</strong> High voltage is what allows electrical current to arc through clothing and penetrate skin. Low amperage is what makes the device non-lethal. Household current at 120V/15A is far more dangerous than a taser at 50,000V/0.003A. The taser's designed waveform specifically targets motor nerve disruption while staying below cardiac risk thresholds — which is why medical research has consistently shown TASERs to be far safer than firearms or impact weapons.</p>
+  </div>
+
+  <h2>Why Tasers Work on Everyone</h2>
+  <p class="body-text">The key advantage of neuromuscular disruption over pain compliance is that it bypasses the brain entirely. A person with extreme adrenaline, under the influence of drugs or alcohol, or with a high pain tolerance can resist or push through the pain from a contact stun gun. They cannot resist involuntary muscle contraction — it is a direct physical override of the motor nervous system.</p>
+  <p class="body-text">This is why law enforcement adopted tasers as a primary non-lethal force option, and why civilian tasers modeled on law enforcement technology are the most effective non-lethal self-defense tools available.</p>
+
+  <div style="margin-top:40px;padding:24px;background:var(--bg-card);border:1px solid var(--border);display:flex;gap:16px;flex-wrap:wrap;">
+    <a href="/best-taser/" style="display:inline-flex;align-items:center;background:var(--yellow);color:#000;font-family:var(--display);font-size:14px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:12px 24px;">See Top Taser Picks</a>
+    <a href="/resources/taser-vs-stun-gun/" style="display:inline-flex;align-items:center;background:transparent;color:var(--blue);font-family:var(--display);font-size:14px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:11px 24px;border:1px solid var(--blue);">Taser vs. Stun Gun</a>
+  </div>
+</div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="logo" style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;text-transform:uppercase;color:var(--text-1);">Taser<span style="color:var(--yellow)">World</span></a></div>
+    <div><p class="footer-copy">&copy; 2025 TaserWorld.com</p><p class="footer-disclaimer" style="margin-top:8px;">For informational purposes only. "TASER" is a registered trademark of Axon Enterprise, Inc.</p></div>
+  </div>
+</footer>
+</body>
+</html>

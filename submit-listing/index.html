@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Dealer Listing — TaserWorld</title>
+  <meta name="description" content="List your taser dealership or authorized retailer in the TaserWorld dealer directory. Free submissions for licensed dealers.">
+  <link rel="canonical" href="https://www.taserworld.com/submit-listing/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg-deep:#080c10;--bg-mid:#0d1520;--bg-card:#111d2e;--border:#1a2d44;--border-hi:#1e3a56;--blue:#0ea5e9;--yellow:#facc15;--green:#22c55e;--text-1:#e8edf3;--text-2:#8fa8c0;--text-3:#4d6b85;--display:'Barlow Condensed',sans-serif;--body:'Barlow',sans-serif;--mono:'IBM Plex Mono',monospace;}
+    html{scroll-behavior:smooth;}
+    body{background:var(--bg-deep);color:var(--text-1);font-family:var(--body);font-size:16px;line-height:1.6;overflow-x:hidden;}
+    a{color:var(--blue);text-decoration:none;}a:hover{color:var(--yellow);}
+    header{position:sticky;top:0;z-index:100;background:rgba(8,12,16,0.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .header-inner{max-width:1280px;margin:0 auto;padding:0 24px;height:60px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+    .logo{font-family:var(--display);font-size:26px;font-weight:800;letter-spacing:0.04em;text-transform:uppercase;color:var(--text-1);}
+    .logo span{color:var(--yellow);}
+    .breadcrumb{font-family:var(--mono);font-size:11px;letter-spacing:0.08em;color:var(--text-3);display:flex;align-items:center;gap:8px;}
+    .breadcrumb a{color:var(--text-3);}
+    .inner{max-width:760px;margin:0 auto;padding:0 24px;}
+    .page-hero{background:var(--bg-mid);border-bottom:1px solid var(--border);padding:60px 0 48px;position:relative;}
+    .page-hero::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);}
+    .section-label{font-family:var(--mono);font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;}
+    h1{font-family:var(--display);font-size:clamp(40px,5vw,64px);font-weight:800;text-transform:uppercase;line-height:0.95;margin-bottom:20px;}
+
+    .form-section{padding:60px 0 80px;}
+    .form-card{background:var(--bg-card);border:1px solid var(--border);padding:40px;}
+    .form-group{margin-bottom:24px;}
+    label{display:block;font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;}
+    label .req{color:var(--yellow);}
+    input,select,textarea{width:100%;background:var(--bg-mid);border:1px solid var(--border);color:var(--text-1);font-family:var(--body);font-size:15px;padding:12px 16px;outline:none;transition:border-color 0.15s;}
+    input:focus,select:focus,textarea:focus{border-color:var(--blue);}
+    input::placeholder,textarea::placeholder{color:var(--text-3);}
+    select option{background:var(--bg-mid);color:var(--text-1);}
+    textarea{min-height:120px;resize:vertical;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+    .checkbox-group{display:flex;flex-direction:column;gap:10px;margin-top:4px;}
+    .checkbox-item{display:flex;align-items:center;gap:10px;cursor:pointer;}
+    .checkbox-item input[type=checkbox]{width:auto;cursor:pointer;}
+    .checkbox-item span{font-size:14px;color:var(--text-2);}
+    .submit-btn{width:100%;background:var(--yellow);color:#000;font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;padding:16px;border:none;cursor:pointer;transition:background 0.15s;margin-top:8px;}
+    .submit-btn:hover{background:#fde047;}
+    .form-note{font-size:13px;color:var(--text-3);margin-top:16px;line-height:1.6;}
+    .benefit-list{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px;}
+    .benefit-list li{display:flex;gap:10px;font-size:15px;color:var(--text-2);}
+    .benefit-list li::before{content:'—';color:var(--yellow);font-family:var(--mono);flex-shrink:0;}
+    footer{background:#050810;border-top:1px solid var(--border);padding:40px 0;}
+    .footer-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:flex-start;gap:24px;flex-wrap:wrap;}
+    .footer-copy{font-family:var(--mono);font-size:11px;color:var(--text-3);}
+    .footer-disclaimer{font-size:12px;color:var(--text-3);max-width:580px;line-height:1.6;}
+    @media(max-width:640px){.form-row{grid-template-columns:1fr;}.form-card{padding:24px;}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Taser<span>World</span></a>
+    <nav class="breadcrumb">
+      <a href="/">Home</a><span style="color:#1e3a56">/</span>
+      <span style="color:var(--text-2)">Submit Listing</span>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="inner">
+    <p class="section-label">Dealer Directory</p>
+    <h1>Submit Your<br>Dealer Listing</h1>
+    <p style="font-size:17px;color:var(--text-2);max-width:580px;line-height:1.7;">Get your business listed in the TaserWorld dealer directory — reaching buyers actively searching for licensed taser dealers in your state.</p>
+    <ul class="benefit-list">
+      <li>Free basic listing for licensed dealers and authorized retailers</li>
+      <li>Listed on your state page and the national dealer directory</li>
+      <li>Reach buyers searching "taser dealer near me" and "taser price near me"</li>
+      <li>Submissions reviewed within 3–5 business days</li>
+    </ul>
+  </div>
+</section>
+
+<section class="form-section">
+<div class="inner">
+  <div class="form-card">
+    <!--
+      GOOGLE APPS SCRIPT ENDPOINT
+      Replace action URL with your deployed GAS web app URL
+      Example: https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+    -->
+    <form id="listingForm" action="https://script.google.com/macros/s/REPLACE_WITH_YOUR_GAS_ID/exec" method="POST">
+
+      <h2 style="font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase;margin-bottom:28px;">Business Information</h2>
+
+      <div class="form-group">
+        <label>Business Name <span class="req">*</span></label>
+        <input type="text" name="businessName" placeholder="e.g. Guardian Self Defense" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>City <span class="req">*</span></label>
+          <input type="text" name="city" placeholder="e.g. Dallas" required>
+        </div>
+        <div class="form-group">
+          <label>State <span class="req">*</span></label>
+          <select name="state" required>
+            <option value="">Select State</option>
+            <option>Alabama</option><option>Alaska</option><option>Arizona</option><option>Arkansas</option>
+            <option>California</option><option>Colorado</option><option>Connecticut</option><option>Delaware</option>
+            <option>Florida</option><option>Georgia</option><option>Hawaii</option><option>Idaho</option>
+            <option>Illinois</option><option>Indiana</option><option>Iowa</option><option>Kansas</option>
+            <option>Kentucky</option><option>Louisiana</option><option>Maine</option><option>Maryland</option>
+            <option>Massachusetts</option><option>Michigan</option><option>Minnesota</option><option>Mississippi</option>
+            <option>Missouri</option><option>Montana</option><option>Nebraska</option><option>Nevada</option>
+            <option>New Hampshire</option><option>New Jersey</option><option>New Mexico</option><option>New York</option>
+            <option>North Carolina</option><option>North Dakota</option><option>Ohio</option><option>Oklahoma</option>
+            <option>Oregon</option><option>Pennsylvania</option><option>Rhode Island</option><option>South Carolina</option>
+            <option>South Dakota</option><option>Tennessee</option><option>Texas</option><option>Utah</option>
+            <option>Vermont</option><option>Virginia</option><option>Washington</option><option>West Virginia</option>
+            <option>Wisconsin</option><option>Wyoming</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Street Address</label>
+        <input type="text" name="address" placeholder="e.g. 123 Main St, Suite 100">
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Phone Number <span class="req">*</span></label>
+          <input type="tel" name="phone" placeholder="(555) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Website</label>
+          <input type="url" name="website" placeholder="https://yoursite.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Contact Email <span class="req">*</span></label>
+        <input type="email" name="email" placeholder="you@yourbusiness.com" required>
+        <p style="font-size:12px;color:var(--text-3);margin-top:6px;">For listing verification only — not displayed publicly.</p>
+      </div>
+
+      <div class="form-group" style="margin-top:8px;">
+        <label>Products &amp; Specialties</label>
+        <div class="checkbox-group">
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="TASER Axon"><span>TASER / Axon products</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="Byrna"><span>Byrna</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="PhaZZer"><span>PhaZZer</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="Stun Guns"><span>Stun guns / contact devices</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="Law Enforcement"><span>Law enforcement supply</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="Training"><span>Certified training / instruction</span></label>
+          <label class="checkbox-item"><input type="checkbox" name="specialty" value="Online Sales"><span>Online sales / ships nationwide</span></label>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Authorized Dealer Status</label>
+        <select name="authorized">
+          <option value="">Select one</option>
+          <option>Authorized TASER/Axon dealer</option>
+          <option>Authorized Byrna dealer</option>
+          <option>Independent retailer</option>
+          <option>Law enforcement supply</option>
+          <option>Online retailer</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea name="notes" placeholder="Hours, services, anything else you'd like listed..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Listing</button>
+      <p class="form-note">By submitting, you confirm that your business is a licensed seller of tasers and/or stun devices operating in compliance with applicable state laws. TaserWorld reserves the right to verify and decline any listing.</p>
+    </form>
+
+    <div id="formSuccess" style="display:none;padding:32px;text-align:center;">
+      <p style="font-family:var(--display);font-size:28px;font-weight:800;text-transform:uppercase;color:var(--green);margin-bottom:12px;">Listing Received</p>
+      <p style="color:var(--text-2);font-size:15px;">We'll review your submission and follow up at the email you provided within 3–5 business days.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div><a href="/" class="logo" style="font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:800;text-transform:uppercase;color:var(--text-1);">Taser<span style="color:var(--yellow)">World</span></a></div>
+    <div><p class="footer-copy">&copy; 2025 TaserWorld.com</p><p class="footer-disclaimer" style="margin-top:8px;">For informational purposes only. TaserWorld does not endorse any specific dealer. All listings are independently verified.</p></div>
+  </div>
+</footer>
+
+<script>
+  // Form submission handler
+  // When GAS endpoint is live, this intercepts the submit and posts via fetch
+  var form = document.getElementById('listingForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var btn = form.querySelector('.submit-btn');
+      btn.textContent = 'Submitting...';
+      btn.disabled = true;
+
+      var data = new FormData(form);
+      fetch(form.action, { method: 'POST', body: data })
+        .then(function() {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').style.display = 'block';
+        })
+        .catch(function() {
+          btn.textContent = 'Submit Listing';
+          btn.disabled = false;
+          alert('There was an error submitting your listing. Please try again or email us directly.');
+        });
+    });
+  }
+</script>
+</body>
+</html>
