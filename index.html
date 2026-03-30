@@ -1,1 +1,1485 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaserWorld — Taser Dealers, Laws by State & Resources</title>
+  <meta name="description" content="The complete taser resource directory. Find licensed taser dealers near you, check taser laws by state, compare brands like TASER/Axon, Byrna, and PhaZZer, and access safety resources.">
+  <meta name="keywords" content="taser dealers, taser laws by state, TASER Axon, stun gun laws, taser directory, civilian taser, self defense taser">
+  <link rel="canonical" href="https://www.taserworld.com/">
+  <meta property="og:title" content="TaserWorld — Taser Dealers, Laws by State & Resources">
+  <meta property="og:description" content="The complete taser resource directory. Find dealers, check your state's laws, and compare brands.">
+  <meta property="og:url" content="https://www.taserworld.com/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg-deep:    #080c10;
+      --bg-mid:     #0d1520;
+      --bg-card:    #111d2e;
+      --bg-card2:   #0e1928;
+      --border:     #1a2d44;
+      --border-hi:  #1e3a56;
+      --blue:       #0ea5e9;
+      --blue-dim:   #0369a1;
+      --blue-glow:  rgba(14,165,233,0.18);
+      --yellow:     #facc15;
+      --yellow-dim: #ca8a04;
+      --red:        #ef4444;
+      --green:      #22c55e;
+      --text-1:     #e8edf3;
+      --text-2:     #8fa8c0;
+      --text-3:     #4d6b85;
+      --mono:       'IBM Plex Mono', monospace;
+      --display:    'Barlow Condensed', sans-serif;
+      --body:       'Barlow', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg-deep);
+      color: var(--text-1);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── SCANLINE TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0,0,0,0.07) 2px,
+        rgba(0,0,0,0.07) 4px
+      );
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { color: var(--yellow); }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(8,12,16,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: var(--display);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-1);
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--yellow);
+    }
+
+    nav { display: flex; align-items: center; gap: 4px; }
+
+    nav a {
+      font-family: var(--display);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      padding: 6px 12px;
+      border-radius: 4px;
+      transition: color 0.15s, background 0.15s;
+    }
+
+    nav a:hover { color: var(--text-1); background: rgba(255,255,255,0.05); }
+
+    .nav-cta {
+      background: var(--yellow) !important;
+      color: #000 !important;
+      font-weight: 700 !important;
+      padding: 7px 16px !important;
+    }
+    .nav-cta:hover { background: #fde047 !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--text-1);
+      transition: all 0.2s;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--bg-deep);
+    }
+
+    .hero-grid-bg {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(14,165,233,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14,165,233,0.04) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    .hero-glow {
+      position: absolute;
+      top: -200px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 900px;
+      height: 600px;
+      background: radial-gradient(ellipse at center, rgba(14,165,233,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-accent-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--blue), var(--yellow), transparent);
+    }
+
+    .hero-inner {
+      position: relative;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 32px;
+      height: 1px;
+      background: var(--blue);
+    }
+
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(52px, 7vw, 96px);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 .line-accent { color: var(--yellow); display: block; }
+
+    .hero-desc {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--text-2);
+      max-width: 540px;
+      line-height: 1.7;
+      margin-bottom: 40px;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--blue);
+      color: #fff;
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: #38bdf8; color: #fff; transform: translateY(-1px); }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: transparent;
+      color: var(--yellow);
+      font-family: var(--display);
+      font-size: 15px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 13px 28px;
+      border: 1px solid var(--yellow);
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-secondary:hover { background: rgba(250,204,21,0.1); color: var(--yellow); transform: translateY(-1px); }
+
+    /* Hero stat panel */
+    .hero-stats {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 32px;
+      position: relative;
+    }
+
+    .hero-stats::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--yellow));
+    }
+
+    .stat-row {
+      display: flex;
+      flex-direction: column;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .stat-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .stat-row:first-child { padding-top: 0; }
+
+    .stat-num {
+      font-family: var(--display);
+      font-size: 48px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--yellow);
+    }
+
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-top: 4px;
+    }
+
+    .stat-note {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-top: 6px;
+    }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 80px 0; }
+
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--display);
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      font-size: 16px;
+      color: var(--text-2);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+
+    /* ── STATE LAWS SNAPSHOT ── */
+    .laws-section { background: var(--bg-mid); }
+
+    .laws-table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    thead tr {
+      background: rgba(14,165,233,0.1);
+      border-bottom: 2px solid var(--blue-dim);
+    }
+
+    thead th {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      padding: 14px 20px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+
+    tbody tr:hover { background: rgba(14,165,233,0.04); }
+
+    tbody td {
+      padding: 14px 20px;
+      color: var(--text-2);
+      vertical-align: top;
+    }
+
+    tbody td:first-child {
+      color: var(--text-1);
+      font-weight: 500;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      white-space: nowrap;
+    }
+
+    .status-badge::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+
+    .status-legal {
+      background: rgba(34,197,94,0.12);
+      color: var(--green);
+      border: 1px solid rgba(34,197,94,0.3);
+    }
+    .status-legal::before { background: var(--green); }
+
+    .status-restricted {
+      background: rgba(250,204,21,0.1);
+      color: var(--yellow);
+      border: 1px solid rgba(250,204,21,0.3);
+    }
+    .status-restricted::before { background: var(--yellow); }
+
+    .status-illegal {
+      background: rgba(239,68,68,0.1);
+      color: var(--red);
+      border: 1px solid rgba(239,68,68,0.3);
+    }
+    .status-illegal::before { background: var(--red); }
+
+    .laws-cta-bar {
+      margin-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .laws-note {
+      font-size: 12px;
+      color: var(--text-3);
+      font-family: var(--mono);
+    }
+
+    /* ── STATE BROWSE GRID ── */
+    .states-section { background: var(--bg-deep); }
+
+    .state-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 6px;
+    }
+
+    .state-cell {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 10px 8px;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: border-color 0.15s, color 0.15s, background 0.15s;
+      text-decoration: none;
+      display: block;
+    }
+
+    .state-cell:hover {
+      border-color: var(--blue);
+      color: var(--blue);
+      background: var(--blue-glow);
+    }
+
+    .state-cell.illegal {
+      border-color: rgba(239,68,68,0.3);
+      color: var(--red);
+    }
+
+    .state-cell.illegal:hover {
+      border-color: var(--red);
+      background: rgba(239,68,68,0.08);
+    }
+
+    .state-abbr {
+      display: block;
+      font-weight: 500;
+      font-size: 14px;
+      color: inherit;
+    }
+
+    .state-name-sm {
+      display: block;
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      margin-top: 2px;
+      opacity: 0.7;
+    }
+
+    .state-legend {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--text-2);
+    }
+
+    .legend-item { display: flex; align-items: center; gap: 8px; }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* ── DEALER CARDS ── */
+    .dealers-section { background: var(--bg-mid); }
+
+    .dealer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .dealer-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 28px;
+      position: relative;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .dealer-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--blue);
+      transition: width 0.2s;
+    }
+
+    .dealer-card:hover {
+      border-color: var(--border-hi);
+      transform: translateY(-2px);
+    }
+
+    .dealer-card:hover::before { width: 4px; }
+
+    .dealer-badge {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-glow);
+      border: 1px solid rgba(14,165,233,0.25);
+      padding: 3px 8px;
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+
+    .dealer-name {
+      font-family: var(--display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 6px;
+    }
+
+    .dealer-location {
+      font-size: 14px;
+      color: var(--text-2);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dealer-location::before {
+      content: '▸';
+      color: var(--yellow);
+      font-size: 10px;
+    }
+
+    .dealer-contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .dealer-contact-row {
+      font-size: 14px;
+      color: var(--text-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .contact-icon {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-3);
+      width: 50px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .dealer-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      color: var(--text-3);
+    }
+
+    /* ── BRANDS ── */
+    .brands-section { background: var(--bg-deep); }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 2px;
+    }
+
+    .brand-card {
+      background: var(--bg-card);
+      padding: 32px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.2s;
+    }
+
+    .brand-card:hover { border-color: var(--border-hi); }
+
+    .brand-card::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      right: -40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--blue-glow), transparent);
+      pointer-events: none;
+    }
+
+    .brand-name {
+      font-family: var(--display);
+      font-size: 28px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-1);
+      margin-bottom: 6px;
+    }
+
+    .brand-type {
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--blue);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .brand-desc {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .brand-models {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .brand-model-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-2);
+    }
+
+    .brand-model-row::before {
+      content: '—';
+      color: var(--yellow);
+      font-family: var(--mono);
+    }
+
+    /* ── RESOURCES ── */
+    .resources-section { background: var(--bg-mid); }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .resource-card {
+      background: var(--bg-card2);
+      border: 1px solid var(--border);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: border-color 0.2s, background 0.2s;
+      text-decoration: none;
+    }
+
+    .resource-card:hover {
+      border-color: var(--blue);
+      background: var(--bg-card);
+      color: inherit;
+    }
+
+    .resource-icon {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      color: var(--yellow);
+      text-transform: uppercase;
+    }
+
+    .resource-title {
+      font-family: var(--display);
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-1);
+      line-height: 1.1;
+    }
+
+    .resource-desc {
+      font-size: 14px;
+      color: var(--text-2);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .resource-link {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #050810;
+      border-top: 1px solid var(--border);
+      padding: 56px 0 40px;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 280px 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .footer-brand .logo { font-size: 28px; }
+
+    .footer-brand-desc {
+      font-size: 13px;
+      color: var(--text-3);
+      margin-top: 14px;
+      line-height: 1.7;
+    }
+
+    .footer-col-title {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 14px;
+      color: var(--text-3);
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--text-1); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--text-3);
+    }
+
+    .footer-disclaimer {
+      font-size: 12px;
+      color: var(--text-3);
+      max-width: 640px;
+      line-height: 1.6;
+    }
+
+    /* ── MOBILE NAV ── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,12,16,0.97);
+      z-index: 200;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: var(--display);
+      font-size: 36px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--text-1);
+      letter-spacing: 0.05em;
+      transition: color 0.15s;
+    }
+
+    .mobile-nav a:hover { color: var(--yellow); }
+
+    .mobile-nav-close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      color: var(--text-2);
+      background: none;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); }
+      .stat-row { padding: 16px; border-bottom: none; border-right: 1px solid var(--border); }
+      .stat-row:last-child { border-right: none; }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 768px) {
+      nav { display: none; }
+      .hamburger { display: flex; }
+      .hero-inner { padding: 60px 24px; }
+      .hero-stats { grid-template-columns: 1fr; }
+      .stat-row { border-right: none; border-bottom: 1px solid var(--border); }
+      .stat-row:last-child { border-bottom: none; }
+      .dealer-grid, .brand-grid, .resource-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; }
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow { animation: fadeUp 0.5s ease both; animation-delay: 0.1s; }
+    h1            { animation: fadeUp 0.5s ease both; animation-delay: 0.2s; }
+    .hero-desc    { animation: fadeUp 0.5s ease both; animation-delay: 0.3s; }
+    .hero-cta-group { animation: fadeUp 0.5s ease both; animation-delay: 0.4s; }
+    .hero-stats   { animation: fadeUp 0.5s ease both; animation-delay: 0.35s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-label="Navigation">
+  <button class="mobile-nav-close" id="mobileNavClose">Close</button>
+  <a href="#dealers">Dealers</a>
+  <a href="#laws">Laws by State</a>
+  <a href="#brands">Brands</a>
+  <a href="#resources">Resources</a>
+  <a href="#about">About</a>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Taser<span>World</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#dealers">Dealers</a>
+      <a href="#laws">Laws by State</a>
+      <a href="#brands">Brands</a>
+      <a href="#resources">Resources</a>
+      <a href="#about">About</a>
+      <a href="#dealers" class="nav-cta">Find a Dealer</a>
+    </nav>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-accent-line" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Taser Resource Directory</p>
+      <h1>
+        The Complete
+        <span class="line-accent">Taser</span>
+        Directory
+      </h1>
+      <p class="hero-desc">
+        Find licensed taser dealers near you, look up taser laws for every U.S. state, compare brands and models, and access safety resources — all in one place.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#dealers" class="btn-primary">Find a Dealer</a>
+        <a href="#laws" class="btn-secondary">Check Your State's Laws</a>
+      </div>
+    </div>
+
+    <div class="hero-stats" aria-label="Directory statistics">
+      <div class="stat-row">
+        <span class="stat-num">47</span>
+        <span class="stat-label">States where tasers are legal</span>
+        <span class="stat-note">Laws vary — permits may be required</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-num">3</span>
+        <span class="stat-label">Jurisdictions with civilian bans</span>
+        <span class="stat-note">Hawaii, Rhode Island, Washington DC</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-num">50+</span>
+        <span class="stat-label">Dealers listed nationwide</span>
+        <span class="stat-note">Growing directory — submit your listing</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAWS SNAPSHOT -->
+<section class="laws-section" id="laws">
+  <div class="section-inner">
+    <p class="section-label">Legal Reference</p>
+    <h2 class="section-title">Taser Laws by State</h2>
+    <p class="section-sub">Civilian taser ownership laws vary significantly across the United States. Verify current laws in your state before purchasing. This is informational only — not legal advice.</p>
+
+    <div class="laws-table-wrap" role="region" aria-label="Taser laws by state">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">State</th>
+            <th scope="col">Status</th>
+            <th scope="col">Permit Required</th>
+            <th scope="col">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alabama</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>No restrictions on civilian possession</td>
+          </tr>
+          <tr>
+            <td>Alaska</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>No restrictions on civilian possession</td>
+          </tr>
+          <tr>
+            <td>Arizona</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>No restrictions on civilian possession</td>
+          </tr>
+          <tr>
+            <td>California</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>Restored 2019. Felons and minors prohibited</td>
+          </tr>
+          <tr>
+            <td>Florida</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>No restrictions on civilian possession</td>
+          </tr>
+          <tr>
+            <td>Hawaii</td>
+            <td><span class="status-badge status-illegal">Illegal</span></td>
+            <td>N/A</td>
+            <td>Prohibited for civilian ownership statewide</td>
+          </tr>
+          <tr>
+            <td>Illinois</td>
+            <td><span class="status-badge status-restricted">Restricted</span></td>
+            <td>Yes — FOID Card</td>
+            <td>Firearm Owner's Identification Card required</td>
+          </tr>
+          <tr>
+            <td>Massachusetts</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>Restored 2022 after court ruling</td>
+          </tr>
+          <tr>
+            <td>New Jersey</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>Restored 2023 after court ruling</td>
+          </tr>
+          <tr>
+            <td>New York</td>
+            <td><span class="status-badge status-legal">Legal</span></td>
+            <td>No</td>
+            <td>Restored 2019. Felons and minors prohibited</td>
+          </tr>
+          <tr>
+            <td>Rhode Island</td>
+            <td><span class="status-badge status-illegal">Illegal</span></td>
+            <td>N/A</td>
+            <td>Prohibited for civilian ownership statewide</td>
+          </tr>
+          <tr>
+            <td>Washington D.C.</td>
+            <td><span class="status-badge status-illegal">Illegal</span></td>
+            <td>N/A</td>
+            <td>Prohibited for civilian ownership</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="laws-cta-bar">
+      <span class="laws-note">// Data current as of 2025. Laws change — always verify locally.</span>
+      <a href="laws/" class="btn-secondary">View All 50 States</a>
+    </div>
+  </div>
+</section>
+
+<!-- BROWSE BY STATE -->
+<section class="states-section" id="states">
+  <div class="section-inner">
+    <p class="section-label">Browse Directory</p>
+    <h2 class="section-title">Find Dealers by State</h2>
+    <p class="section-sub">Select your state to view licensed dealers and local laws.</p>
+
+    <div class="state-legend" aria-label="Map legend">
+      <div class="legend-item">
+        <span class="legend-dot" style="background:var(--blue)"></span>
+        <span>Legal</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot" style="background:var(--yellow)"></span>
+        <span>Restricted / Permit Required</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot" style="background:var(--red)"></span>
+        <span>Illegal for Civilians</span>
+      </div>
+    </div>
+
+    <div class="state-grid" role="list">
+      <a href="states/alabama/" class="state-cell" role="listitem"><span class="state-abbr">AL</span><span class="state-name-sm">Alabama</span></a>
+      <a href="states/alaska/" class="state-cell" role="listitem"><span class="state-abbr">AK</span><span class="state-name-sm">Alaska</span></a>
+      <a href="states/arizona/" class="state-cell" role="listitem"><span class="state-abbr">AZ</span><span class="state-name-sm">Arizona</span></a>
+      <a href="states/arkansas/" class="state-cell" role="listitem"><span class="state-abbr">AR</span><span class="state-name-sm">Arkansas</span></a>
+      <a href="states/california/" class="state-cell" role="listitem"><span class="state-abbr">CA</span><span class="state-name-sm">California</span></a>
+      <a href="states/colorado/" class="state-cell" role="listitem"><span class="state-abbr">CO</span><span class="state-name-sm">Colorado</span></a>
+      <a href="states/connecticut/" class="state-cell" role="listitem"><span class="state-abbr">CT</span><span class="state-name-sm">Connecticut</span></a>
+      <a href="states/delaware/" class="state-cell" role="listitem"><span class="state-abbr">DE</span><span class="state-name-sm">Delaware</span></a>
+      <a href="states/florida/" class="state-cell" role="listitem"><span class="state-abbr">FL</span><span class="state-name-sm">Florida</span></a>
+      <a href="states/georgia/" class="state-cell" role="listitem"><span class="state-abbr">GA</span><span class="state-name-sm">Georgia</span></a>
+      <a href="states/hawaii/" class="state-cell illegal" role="listitem"><span class="state-abbr">HI</span><span class="state-name-sm">Hawaii</span></a>
+      <a href="states/idaho/" class="state-cell" role="listitem"><span class="state-abbr">ID</span><span class="state-name-sm">Idaho</span></a>
+      <a href="states/illinois/" class="state-cell" style="border-color:rgba(250,204,21,0.35);color:var(--yellow)" role="listitem"><span class="state-abbr">IL</span><span class="state-name-sm">Illinois</span></a>
+      <a href="states/indiana/" class="state-cell" role="listitem"><span class="state-abbr">IN</span><span class="state-name-sm">Indiana</span></a>
+      <a href="states/iowa/" class="state-cell" role="listitem"><span class="state-abbr">IA</span><span class="state-name-sm">Iowa</span></a>
+      <a href="states/kansas/" class="state-cell" role="listitem"><span class="state-abbr">KS</span><span class="state-name-sm">Kansas</span></a>
+      <a href="states/kentucky/" class="state-cell" role="listitem"><span class="state-abbr">KY</span><span class="state-name-sm">Kentucky</span></a>
+      <a href="states/louisiana/" class="state-cell" role="listitem"><span class="state-abbr">LA</span><span class="state-name-sm">Louisiana</span></a>
+      <a href="states/maine/" class="state-cell" role="listitem"><span class="state-abbr">ME</span><span class="state-name-sm">Maine</span></a>
+      <a href="states/maryland/" class="state-cell" role="listitem"><span class="state-abbr">MD</span><span class="state-name-sm">Maryland</span></a>
+      <a href="states/massachusetts/" class="state-cell" role="listitem"><span class="state-abbr">MA</span><span class="state-name-sm">Massachusetts</span></a>
+      <a href="states/michigan/" class="state-cell" role="listitem"><span class="state-abbr">MI</span><span class="state-name-sm">Michigan</span></a>
+      <a href="states/minnesota/" class="state-cell" role="listitem"><span class="state-abbr">MN</span><span class="state-name-sm">Minnesota</span></a>
+      <a href="states/mississippi/" class="state-cell" role="listitem"><span class="state-abbr">MS</span><span class="state-name-sm">Mississippi</span></a>
+      <a href="states/missouri/" class="state-cell" role="listitem"><span class="state-abbr">MO</span><span class="state-name-sm">Missouri</span></a>
+      <a href="states/montana/" class="state-cell" role="listitem"><span class="state-abbr">MT</span><span class="state-name-sm">Montana</span></a>
+      <a href="states/nebraska/" class="state-cell" role="listitem"><span class="state-abbr">NE</span><span class="state-name-sm">Nebraska</span></a>
+      <a href="states/nevada/" class="state-cell" role="listitem"><span class="state-abbr">NV</span><span class="state-name-sm">Nevada</span></a>
+      <a href="states/new-hampshire/" class="state-cell" role="listitem"><span class="state-abbr">NH</span><span class="state-name-sm">New Hampshire</span></a>
+      <a href="states/new-jersey/" class="state-cell" role="listitem"><span class="state-abbr">NJ</span><span class="state-name-sm">New Jersey</span></a>
+      <a href="states/new-mexico/" class="state-cell" role="listitem"><span class="state-abbr">NM</span><span class="state-name-sm">New Mexico</span></a>
+      <a href="states/new-york/" class="state-cell" role="listitem"><span class="state-abbr">NY</span><span class="state-name-sm">New York</span></a>
+      <a href="states/north-carolina/" class="state-cell" role="listitem"><span class="state-abbr">NC</span><span class="state-name-sm">North Carolina</span></a>
+      <a href="states/north-dakota/" class="state-cell" role="listitem"><span class="state-abbr">ND</span><span class="state-name-sm">North Dakota</span></a>
+      <a href="states/ohio/" class="state-cell" role="listitem"><span class="state-abbr">OH</span><span class="state-name-sm">Ohio</span></a>
+      <a href="states/oklahoma/" class="state-cell" role="listitem"><span class="state-abbr">OK</span><span class="state-name-sm">Oklahoma</span></a>
+      <a href="states/oregon/" class="state-cell" role="listitem"><span class="state-abbr">OR</span><span class="state-name-sm">Oregon</span></a>
+      <a href="states/pennsylvania/" class="state-cell" role="listitem"><span class="state-abbr">PA</span><span class="state-name-sm">Pennsylvania</span></a>
+      <a href="states/rhode-island/" class="state-cell illegal" role="listitem"><span class="state-abbr">RI</span><span class="state-name-sm">Rhode Island</span></a>
+      <a href="states/south-carolina/" class="state-cell" role="listitem"><span class="state-abbr">SC</span><span class="state-name-sm">South Carolina</span></a>
+      <a href="states/south-dakota/" class="state-cell" role="listitem"><span class="state-abbr">SD</span><span class="state-name-sm">South Dakota</span></a>
+      <a href="states/tennessee/" class="state-cell" role="listitem"><span class="state-abbr">TN</span><span class="state-name-sm">Tennessee</span></a>
+      <a href="states/texas/" class="state-cell" role="listitem"><span class="state-abbr">TX</span><span class="state-name-sm">Texas</span></a>
+      <a href="states/utah/" class="state-cell" role="listitem"><span class="state-abbr">UT</span><span class="state-name-sm">Utah</span></a>
+      <a href="states/vermont/" class="state-cell" role="listitem"><span class="state-abbr">VT</span><span class="state-name-sm">Vermont</span></a>
+      <a href="states/virginia/" class="state-cell" role="listitem"><span class="state-abbr">VA</span><span class="state-name-sm">Virginia</span></a>
+      <a href="states/washington/" class="state-cell" role="listitem"><span class="state-abbr">WA</span><span class="state-name-sm">Washington</span></a>
+      <a href="states/washington-dc/" class="state-cell illegal" role="listitem"><span class="state-abbr">DC</span><span class="state-name-sm">Washington DC</span></a>
+      <a href="states/west-virginia/" class="state-cell" role="listitem"><span class="state-abbr">WV</span><span class="state-name-sm">West Virginia</span></a>
+      <a href="states/wisconsin/" class="state-cell" role="listitem"><span class="state-abbr">WI</span><span class="state-name-sm">Wisconsin</span></a>
+      <a href="states/wyoming/" class="state-cell" role="listitem"><span class="state-abbr">WY</span><span class="state-name-sm">Wyoming</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED DEALERS -->
+<section class="dealers-section" id="dealers">
+  <div class="section-inner">
+    <p class="section-label">Dealer Directory</p>
+    <h2 class="section-title">Featured Taser Dealers</h2>
+    <p class="section-sub">Licensed retailers and authorized dealers across the United States. Listings are updated regularly.</p>
+
+    <div class="dealer-grid">
+      <!-- Placeholder dealer 1 -->
+      <article class="dealer-card">
+        <span class="dealer-badge">Authorized TASER Dealer</span>
+        <h3 class="dealer-name">Personal Defense Solutions</h3>
+        <p class="dealer-location">Phoenix, AZ 85001</p>
+        <div class="dealer-contacts">
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Phone</span>
+            <a href="tel:+16025550100">(602) 555-0100</a>
+          </div>
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Web</span>
+            <span>personaldefensesolutions.com</span>
+          </div>
+        </div>
+        <div class="dealer-tags">
+          <span class="tag">TASER Axon</span>
+          <span class="tag">Stun Guns</span>
+          <span class="tag">Civilian</span>
+          <span class="tag">Law Enforcement</span>
+        </div>
+      </article>
+
+      <!-- Placeholder dealer 2 -->
+      <article class="dealer-card">
+        <span class="dealer-badge">Certified Instructor</span>
+        <h3 class="dealer-name">Guardian Self Defense</h3>
+        <p class="dealer-location">Dallas, TX 75201</p>
+        <div class="dealer-contacts">
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Phone</span>
+            <a href="tel:+12145550188">(214) 555-0188</a>
+          </div>
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Web</span>
+            <span>guardianselfd.com</span>
+          </div>
+        </div>
+        <div class="dealer-tags">
+          <span class="tag">TASER Pulse+</span>
+          <span class="tag">Training</span>
+          <span class="tag">Civilian</span>
+          <span class="tag">Byrna</span>
+        </div>
+      </article>
+
+      <!-- Placeholder dealer 3 -->
+      <article class="dealer-card">
+        <span class="dealer-badge">Law Enforcement Supply</span>
+        <h3 class="dealer-name">Blue Line Defense Supply</h3>
+        <p class="dealer-location">Atlanta, GA 30301</p>
+        <div class="dealer-contacts">
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Phone</span>
+            <a href="tel:+14045550242">(404) 555-0242</a>
+          </div>
+          <div class="dealer-contact-row">
+            <span class="contact-icon">Web</span>
+            <span>bluelinedefense.com</span>
+          </div>
+        </div>
+        <div class="dealer-tags">
+          <span class="tag">TASER 7</span>
+          <span class="tag">TASER 10</span>
+          <span class="tag">Law Enforcement</span>
+          <span class="tag">Wholesale</span>
+        </div>
+      </article>
+    </div>
+
+    <div style="margin-top:32px; display:flex; gap:16px; flex-wrap:wrap;">
+      <a href="dealers/" class="btn-primary">View All Dealers</a>
+      <a href="submit-listing/" class="btn-secondary">Submit Your Listing</a>
+    </div>
+  </div>
+</section>
+
+<!-- BRANDS -->
+<section class="brands-section" id="brands">
+  <div class="section-inner">
+    <p class="section-label">Brands & Models</p>
+    <h2 class="section-title">Taser Brands</h2>
+    <p class="section-sub">The leading manufacturers of conducted energy devices (CEDs) for civilian, law enforcement, and military use.</p>
+
+    <div class="brand-grid">
+      <article class="brand-card">
+        <h3 class="brand-name">TASER / Axon</h3>
+        <p class="brand-type">Conducted Energy Devices</p>
+        <p class="brand-desc">The originator of the modern taser. Axon Enterprise (formerly TASER International) dominates both civilian and law enforcement markets with the most trusted and widely deployed stun weapons on the market.</p>
+        <div class="brand-models">
+          <div class="brand-model-row">TASER 10 — Law Enforcement (2023)</div>
+          <div class="brand-model-row">TASER 7 — Law Enforcement</div>
+          <div class="brand-model-row">TASER Pulse+ — Civilian, Bluetooth</div>
+          <div class="brand-model-row">TASER StrikeLight 2 — Civilian</div>
+        </div>
+      </article>
+
+      <article class="brand-card">
+        <h3 class="brand-name">Byrna</h3>
+        <p class="brand-type">Personal Security Devices</p>
+        <p class="brand-desc">Byrna Technologies specializes in non-lethal personal security devices including CO2-powered launchers and chemical irritant projectiles designed for civilian self-defense at distance.</p>
+        <div class="brand-models">
+          <div class="brand-model-row">Byrna SD — Civilian launcher</div>
+          <div class="brand-model-row">Byrna LE — Law Enforcement</div>
+          <div class="brand-model-row">Byrna EP — Compact civilian</div>
+          <div class="brand-model-row">Byrna TCR — Tactical</div>
+        </div>
+      </article>
+
+      <article class="brand-card">
+        <h3 class="brand-name">PhaZZer</h3>
+        <p class="brand-type">Electronic Control Devices</p>
+        <p class="brand-desc">PhaZZer Electronics manufactures TASER-alternative electronic control devices for law enforcement and corrections. Known for compatibility with standard TASER cartridges and competitive pricing for agencies.</p>
+        <div class="brand-models">
+          <div class="brand-model-row">Enforcer — Law Enforcement</div>
+          <div class="brand-model-row">Dragon — Corrections</div>
+          <div class="brand-model-row">Rook — Patrol model</div>
+          <div class="brand-model-row">Matador — Training</div>
+        </div>
+      </article>
+
+      <article class="brand-card">
+        <h3 class="brand-name">Vipertek</h3>
+        <p class="brand-type">Consumer Stun Devices</p>
+        <p class="brand-desc">A leading consumer-grade stun gun manufacturer offering compact, rechargeable stun devices at accessible price points. Popular for personal carry and home defense.</p>
+        <div class="brand-models">
+          <div class="brand-model-row">VTS-989 — Heavy duty stun baton</div>
+          <div class="brand-model-row">VTS-880 — Mini rechargeable</div>
+          <div class="brand-model-row">VTS-195 — Compact tactical</div>
+          <div class="brand-model-row">VTS-T03 — Tactical flashlight</div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources-section" id="resources">
+  <div class="section-inner">
+    <p class="section-label">Education & Safety</p>
+    <h2 class="section-title">Resources</h2>
+    <p class="section-sub">Reference guides covering taser safety, legal context, and training for responsible ownership.</p>
+
+    <div class="resource-grid">
+      <a href="resources/how-tasers-work/" class="resource-card">
+        <span class="resource-icon">// Reference</span>
+        <h3 class="resource-title">How Tasers Work</h3>
+        <p class="resource-desc">A technical overview of conducted energy devices — how probes are deployed, how electrical pulses disrupt neuromuscular control, and the difference between drive-stun and probe modes.</p>
+        <span class="resource-link">Read Guide &rarr;</span>
+      </a>
+
+      <a href="resources/self-defense-laws/" class="resource-card">
+        <span class="resource-icon">// Legal</span>
+        <h3 class="resource-title">Self-Defense Laws</h3>
+        <p class="resource-desc">An overview of stand-your-ground laws, castle doctrine, and use-of-force standards as they apply to taser use. Understand when use of a taser is legally justified.</p>
+        <span class="resource-link">Read Guide &rarr;</span>
+      </a>
+
+      <a href="resources/safety-training/" class="resource-card">
+        <span class="resource-icon">// Training</span>
+        <h3 class="resource-title">Safety Training</h3>
+        <p class="resource-desc">Best practices for safe storage, handling, and deployment of a taser. Includes information on certified civilian training programs available in your area.</p>
+        <span class="resource-link">Read Guide &rarr;</span>
+      </a>
+
+      <a href="resources/taser-vs-stun-gun/" class="resource-card">
+        <span class="resource-icon">// Comparison</span>
+        <h3 class="resource-title">Taser vs. Stun Gun</h3>
+        <p class="resource-desc">The critical differences between a taser (projectile probes, distance deployment) and a contact stun gun. Learn which is more effective for your situation and what each device can and cannot do.</p>
+        <span class="resource-link">Read Guide &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--bg-deep); padding: 80px 0;">
+  <div class="section-inner">
+    <p class="section-label">About This Directory</p>
+    <h2 class="section-title">What Is TaserWorld</h2>
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; max-width:960px;">
+      <div>
+        <p style="color:var(--text-2); line-height:1.8; margin-bottom:16px;">
+          TaserWorld is an independent reference directory for taser owners, buyers, and researchers. We aggregate dealer listings, state law data, brand information, and safety resources into a single reliable source.
+        </p>
+        <p style="color:var(--text-2); line-height:1.8;">
+          We are not affiliated with TASER, Axon Enterprise, or any manufacturer. All brand names are the property of their respective owners. Dealer listings are independently submitted and verified.
+        </p>
+      </div>
+      <div>
+        <p style="color:var(--text-2); line-height:1.8; margin-bottom:16px;">
+          Our state law data is researched and updated regularly, but laws change. Always confirm current regulations with your state attorney general's office or a qualified attorney before purchasing or carrying a taser.
+        </p>
+        <a href="submit-listing/" class="btn-primary" style="margin-top:8px; display:inline-flex;">Submit a Dealer Listing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo">Taser<span>World</span></div>
+        <p class="footer-brand-desc">The complete taser resource directory. Dealers, laws, brands, and safety resources in one place.</p>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Directory</p>
+        <div class="footer-links">
+          <a href="dealers/">Dealer Listings</a>
+          <a href="states/">Browse by State</a>
+          <a href="brands/">Brands & Models</a>
+          <a href="submit-listing/">Submit a Listing</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Laws</p>
+        <div class="footer-links">
+          <a href="laws/">All State Laws</a>
+          <a href="laws/legal-states/">Legal States</a>
+          <a href="laws/restricted-states/">Restricted States</a>
+          <a href="laws/illegal-states/">Prohibited States</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Resources</p>
+        <div class="footer-links">
+          <a href="resources/how-tasers-work/">How Tasers Work</a>
+          <a href="resources/self-defense-laws/">Self-Defense Laws</a>
+          <a href="resources/safety-training/">Safety Training</a>
+          <a href="resources/taser-vs-stun-gun/">Taser vs. Stun Gun</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 TaserWorld.com — All rights reserved</p>
+      <p class="footer-disclaimer">
+        DISCLAIMER: This website is for informational purposes only and does not constitute legal advice. Taser laws vary by state, city, and municipality. Verify all laws with local authorities before purchasing or carrying a taser. TaserWorld is not affiliated with Axon Enterprise, Inc. or any taser manufacturer. "TASER" is a registered trademark of Axon Enterprise, Inc.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileNavClose = document.getElementById('mobileNavClose');
+
+  hamburger.addEventListener('click', () => {
+    mobileNav.classList.add('open');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+  });
+
+  function closeMobileNav() {
+    mobileNav.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  mobileNavClose.addEventListener('click', closeMobileNav);
+
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileNav);
+  });
+
+  // Escape key closes mobile nav
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMobileNav();
+  });
+</script>
+
+</body>
+</html>

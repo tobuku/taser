@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taser Dealers Directory — TaserWorld</title>
+  <meta name="description" content="Find licensed taser dealers and authorized TASER retailers near you. Search by state or city.">
+  <link rel="canonical" href="https://www.taserworld.com/dealers/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg-deep: #080c10; --bg-mid: #0d1520; --bg-card: #111d2e;
+      --border: #1a2d44; --blue: #0ea5e9; --yellow: #facc15;
+      --text-1: #e8edf3; --text-2: #8fa8c0; --text-3: #4d6b85;
+      --display: 'Barlow Condensed', sans-serif; --body: 'Barlow', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
+    }
+    body { background: var(--bg-deep); color: var(--text-1); font-family: var(--body); }
+    a { color: var(--blue); text-decoration: none; }
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(8,12,16,0.95); border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+    .header-inner {
+      max-width: 1280px; margin: 0 auto; padding: 0 24px;
+      height: 60px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo { font-family: var(--display); font-size: 26px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-1); }
+    .logo span { color: var(--yellow); }
+    .page-hero { padding: 80px 0 60px; border-bottom: 1px solid var(--border); }
+    .inner { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+    .section-label { font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 12px; }
+    h1 { font-family: var(--display); font-size: clamp(40px, 5vw, 72px); font-weight: 800; text-transform: uppercase; line-height: 0.95; margin-bottom: 20px; }
+    .coming-soon-box {
+      margin: 60px 0; padding: 48px; background: var(--bg-card);
+      border: 1px solid var(--border); max-width: 640px;
+    }
+    .coming-soon-box h2 { font-family: var(--display); font-size: 28px; font-weight: 700; text-transform: uppercase; margin-bottom: 16px; }
+    .coming-soon-box p { color: var(--text-2); line-height: 1.7; margin-bottom: 24px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: #fff; font-family: var(--display); font-size: 14px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 12px 24px; }
+    .btn:hover { background: #38bdf8; color: #fff; }
+    .btn-out { background: transparent; border: 1px solid var(--yellow); color: var(--yellow); }
+    .btn-out:hover { background: rgba(250,204,21,0.1); color: var(--yellow); }
+    footer { margin-top: 80px; border-top: 1px solid var(--border); padding: 32px 0; }
+    .footer-copy { font-family: var(--mono); font-size: 11px; color: var(--text-3); }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">Taser<span>World</span></a>
+    <a href="/" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;color:var(--text-2);">&larr; Back to Directory</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="inner">
+    <p class="section-label">Dealer Directory</p>
+    <h1>Taser Dealers<br>Nationwide</h1>
+    <p style="color:var(--text-2);font-size:18px;max-width:540px;line-height:1.7;">
+      Browse licensed taser dealers and authorized retailers across all 50 states. Listings are submitted by dealers and verified by TaserWorld.
+    </p>
+  </div>
+</section>
+
+<div class="inner">
+  <div class="coming-soon-box">
+    <h2>Dealer Listings Coming Soon</h2>
+    <p>
+      We are currently building out the full dealer directory. Listings will be searchable by state, city, and product line. Are you a taser dealer or authorized retailer? Submit your listing to be included at launch.
+    </p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+      <a href="/submit-listing/" class="btn">Submit Your Listing</a>
+      <a href="/" class="btn btn-out">Back to Directory</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="inner">
+    <p class="footer-copy">&copy; 2025 TaserWorld.com — For informational purposes only. Not legal advice.</p>
+  </div>
+</footer>
+</body>
+</html>
